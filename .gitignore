@@ -1,5 +1,6 @@
 #gamefile
 GAME/
+.idea/
 *.png
 *.shp
 *.pal
