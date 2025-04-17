@@ -1,4 +1,4 @@
-Liste des bugs :
+Bugs List:
 
 BR-TRG01
 S-TRAIN1
@@ -6,4 +6,4 @@ V-ATTCK2
 V-SHT2FX
 V-ROD1
 
-subissent des decalage couleur
+страдают от цветовых сдвигов

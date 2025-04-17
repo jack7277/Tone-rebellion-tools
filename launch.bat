@@ -1,3 +1,0 @@
-py shape.py *
-
-pause
