@@ -1,4 +1,4 @@
-# The Tone Rebellion Tools 1997#
+# The Tone Rebellion Tools 1997 #
 https://www.old-games.ru/game/552.html
 
 
@@ -8,7 +8,7 @@ thanks to daumiller for his initial works, sources : https://github.com/daumille
 thanks for rogerbraun for his works to, as helped with fixing the python script : https://github.com/rogerbraun/Ascendancy-tools
 
 
-v2.0 продолжение проекта создания инструментов работы с файлами игры
+# v2.0 продолжение проекта создания инструментов работы с файлами игры #
 - 16.04.2025 добавил в код упаковщик файлов назад в .cob файл 
 
 Проект перевода:
