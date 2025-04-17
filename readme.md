@@ -13,7 +13,7 @@ thanks for rogerbraun for his works to, as helped with fixing the python script 
 Added packer by jack7277
 
 Поддержка автора
-https://boosty.to/jack7277
+https://boosty.to/jack7277/donate
 
 
 TONE0.COB\newgame.txt файл
