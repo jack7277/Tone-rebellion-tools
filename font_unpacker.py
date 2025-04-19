@@ -1,5 +1,6 @@
 import os
 import struct
+
 from PIL import Image
 
 
@@ -9,7 +10,7 @@ def unpack_font_to_bmp(font_file, output_dir):
 
     # Парсим заголовок
     magic = data[:4]  # Первые 4 байта - сигнатура
-    num_glyphs = struct.unpack('<I', data[4:8])[0]  # Количество глифов (4-7 байты)
+    num_glyphs = struct.unpack('<I', data[4:8])[0]  # Количество глифов (4-7 байты), 226 by default (E2 00 00 00)
     height = struct.unpack('<I', data[8:12])[0]  # Высота глифа (8-11 байты)
     pointer_table_offset = 16  # Таблица указателей начинается с 16 байта
 
@@ -69,6 +70,7 @@ def unpack_font_to_bmp(font_file, output_dir):
             print(f"Error processing glyph {glyph_num}: {str(e)}")
 
 
-unpack_font_to_bmp(r'game\fonts\bigfont.fnt', r'game\fonts\bigfontfnt\out')
-unpack_font_to_bmp(r'game\fonts\bigfont.fnt', r'game\fonts\bigfontfnt\out')
-unpack_font_to_bmp(r'game\fonts\bigfont.fnt', r'game\fonts\bigfontfnt\out')
+# unpack all 3 fonts
+unpack_font_to_bmp(r'game\fonts\bigfont.fnt', r'game\fonts\bigfont')  # big
+unpack_font_to_bmp(r'game\fonts\bgoutfnt.fnt', r'game\fonts\bgoutfnt')  # big bold
+unpack_font_to_bmp(r'game\fonts\smfont.fnt', r'game\fonts\smfont')  # small
