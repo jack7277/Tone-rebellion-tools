@@ -15,7 +15,7 @@ thanks for rogerbraun for his works to, as helped with fixing the python script 
 http://notabenoid.org/book/87928
 
 Поддержка автора
-https://boosty.to/jack7277/donate
+https://boosty.to/jack7277/
 
 
 Описание файлов внутри .cob файлов
