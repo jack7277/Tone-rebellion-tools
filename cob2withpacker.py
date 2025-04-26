@@ -27,18 +27,19 @@ class CobArchive:
     def _read_header(self):
         """Чтение заголовка COB архива"""
         self._handle.seek(0, os.SEEK_SET)
+        # первые 4 байта - количество файлов
         count = struct.unpack('<i', self._handle.read(4))[0]
         if count < 1:
             return
 
-        # Чтение путей файлов
+        # Чтение путей файлов внутри cob файла, размер блока на путь+имя = 50 байт
         for _ in range(count):
             path_bytes = self._handle.read(50).partition(b'\0')[0]
             path = path_bytes.decode('cp1251')  # Используем однобайтовую кодировку
             dirname, filename = os.path.split(path.replace('\\', '/'))
             self.files.append(CobFile(dirname, filename))
 
-        # Чтение смещений файлов
+        # Чтение смещений файлов, таблица указателей (32бит) на начало каждого файла
         self.files[0].offset = struct.unpack('<I', self._handle.read(4))[0]
         for i in range(1, count):
             self.files[i].offset = struct.unpack('<I', self._handle.read(4))[0]

@@ -7,6 +7,8 @@ GAME/
 *.cob
 *.fnt
 
+.gitattributes
+
 # pycharm
 .idea/
 
